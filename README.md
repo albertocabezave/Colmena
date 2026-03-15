@@ -42,7 +42,7 @@ En pruebas realizadas sobre hardware estándar (_Intel-powered Classmate Laptop 
 
 ## ¿No tienes un _.log_ para probar? 💾 📈
 
-No te preocupes muchacho, aquí lo tienes, **comprimido**, solo pesa **50Mb**, ve a un wifi y descárgalo:
+No te preocupes muchacho, aquí lo tienes, **comprimido**, solo pesa **50 MB**, ve a un wifi y descárgalo:
 
 > **Antes que nada, aquí está el análisis de virus:**
 > https://www.virustotal.com/gui/url/f300b5d47573adcc0d4a8da7c7e352323cb31f323355ff95baac1dcba393b5ed?nocache=1
@@ -53,4 +53,4 @@ No te preocupes muchacho, aquí lo tienes, **comprimido**, solo pesa **50Mb**, v
 
 2. **Descomprime el archivo:** <pre>gunzip -k http.log.gz</pre>
 
-Tardará un poco dependiendo de tu sistema. Muy poco... Y luego de eso tendras 1.3 Gb de datos para Procesar y Analizar.
+Tardará un poco dependiendo de tu sistema. Muy poco... Y luego de eso tendras 1.3 GB de datos para Procesar y Analizar.
