@@ -1,4 +1,4 @@
-# 🐝⚡️ **COLMENA** ⚡️🐝
+# **COLMENA** ⚡️🐝
 
 ## Ultra Fast Log Scalper 🚀 
 
