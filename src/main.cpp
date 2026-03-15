@@ -35,6 +35,7 @@ int main() {
     return 1;
   }
 
+  cronometro.marcarInicio();
   // 4. EL BUCLE PRINCIPAL
   size_t bytesLeidos = 0;
   long long totalBytesProcesados = 0; // Nueva variable para la velocidad
@@ -43,13 +44,11 @@ int main() {
   while ((bytesLeidos = lector.leerBloque(balde)) > 0) {
     totalBytesProcesados += bytesLeidos; // Sumamos lo que vamos leyendo.
 
-    cronometro.marcarInicio();
 
     // El Analizador solo procesa lo que el Lector trajo de verdad
     analizador.analizarBloque(balde, bytesLeidos);
-
-    cronometro.marcarFin();
   }
+  cronometro.marcarFin();
 
   // 5. Verificación de salud.
   if (lector.huboErrorDeHardware()) {
@@ -57,17 +56,23 @@ int main() {
     std::endl;
   } else {
     // 6. Reporte Final
-    double tiempoSegundos = cronometro.obtenerNanosegundos() / 1000000000.0;
+    double tiempoSegundos = cronometro.obtenerNanosegundos() / 1.0e9;
     double tamanoMB = totalBytesProcesados / (1024.0 * 1024.0);
-    double velocidad = (tiempoSegundos > 0) ? (tamanoMB / tiempoSegundos) : 0;
+    // Evitamos división por cero y calculamos velocidad.
+    double velocidad = (tiempoSegundos > 0.000001) ? (tamanoMB / tiempoSegundos) : 0;
 
     std::cout << "\n [ -- Reporte de rendimiento --]" << std::endl;
     std::cout << "Datos Procesados: " << tamanoMB << " MB" << std::endl;
     std::cout << "Coincidencias: " << analizador.obtenerTotalCoincidencias() <<
     std::endl;
-    std::cout << "Tiempo: " << (tiempoSegundos * 1000.0) << " ms" << std::endl;
-    std::cout << "Velocidad brutal: " << velocidad << " MB/s" << std::endl;
 
+    // Si el tiempo es menos de 1 segundo, mostrar ms, sino, segundos.
+    if (tiempoSegundos < 1.0) {
+      std::cout << "Tiempo: " << (tiempoSegundos * 1000.0) << " ms" << std::endl;
+    } else {
+      std::cout << "Tiempo: " << (tiempoSegundos) << " s" << std::endl;
+    }
+    std::cout << "Velocidad Real: " << velocidad << " MB/s" << std::endl;
   }
 
   lector.cerrar();
