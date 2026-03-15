@@ -35,8 +35,8 @@ En pruebas realizadas sobre hardware estándar (_Intel-powered Classmate Laptop 
 ## Cómo usarlo (Linux/Debian) 🚀 💻
 
 1. **Compilar**: Escribe <pre>make</pre> en la terminal.
-2. **Ejecutar**: Escribe
-<pre>./colmena</pre>
+
+2. **Ejecutar**: Escribe <pre>./colmena</pre>
 
 3. **Probar**: Pon la ruta de tu _.log_, ej.<pre>logs*test/mi_log.log</pre>dale enter, luego te pedirá la **palabra**, **frase** o **caracter** que quieres que busque, escríbela y dale \_ENTER*.
 
