@@ -1,6 +1,6 @@
-# **COLMENA**
+# 🐝⚡️ **COLMENA** ⚡️🐝
 
-## Ultra Fast Log Scalper
+## Ultra Fast Log Scalper 🚀 
 
 ### **COLMENA** es un Motor de búsqueda de patrones en archivos de texto plano diseñado para el rendimiento extremo.
 
@@ -24,15 +24,15 @@ En pruebas realizadas sobre hardware estándar (_Intel-powered Classmate Laptop 
 
 **Nota del Autor:** La velocidad de ~40MB/s es el límite físico del disco en el hardware de prueba. El código está optimizado para procesar datos tan rápido como el disco los entrega.
 
-## Arquitectura Técnica
+## Arquitectura Técnica 🏗
 
-**Porqué es tan rápido?**
+**Porqué es tan rápido?** ⚡ 
 
 1. **Lectura por Bloques (64 KB):** No cargamos el archivo entero en la **RAM**, lo leemos por "baldes" para que el procesador siempre tenga trabajo.
 2. **Rastreo Inteligente:** Si una palabra está cortada entre dos bloques, el programa igual la encuentra con su sistema de memoria de estado.
 3. **Optimización O3:** El código está compilado para sacar el máximo provecho a los procesadores modernos.
 
-## Cómo usarlo (Linux/Debian)
+## Cómo usarlo (Linux/Debian) 🚀 💻
 
 1. **Compilar**: Escribe <pre>make</pre> en la terminal.
 2. **Ejecutar**: Escribe
@@ -40,7 +40,7 @@ En pruebas realizadas sobre hardware estándar (_Intel-powered Classmate Laptop 
 
 3. **Probar**: Pon la ruta de tu _.log_, ej.<pre>logs*test/mi_log.log</pre>dale enter, luego te pedirá la **palabra**, **frase** o **caracter** que quieres que busque, escríbela y dale \_ENTER*.
 
-## ¿No tienes un _.log_ para probar?
+## ¿No tienes un _.log_ para probar? 💾 📈
 
 No te preocupes muchacho, aquí lo tienes, **comprimido**, solo pesa **50Mb**, ve a un wifi y descárgalo:
 
